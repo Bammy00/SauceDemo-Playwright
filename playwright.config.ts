@@ -1,36 +1,36 @@
-import { defineConfig, devices } from "@playwright/test";
-import { defineBddConfig } from "playwright-bdd";
-require("dotenv").config();
+import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
+require('dotenv').config();
 
 const testDir = defineBddConfig({
-  paths: ["features/*.feature"],
-  importTestFrom: "steps/fixtures.ts",
-  quotes: "single",
+  paths: ['features/*.feature'],
+  importTestFrom: 'steps/fixtures.ts',
+  quotes: 'single',
 });
 
 const config = defineConfig({
   testDir,
-  reporter: "html",
+  reporter: 'html',
   use: {
-    baseURL: "https://www.saucedemo.com",
+    baseURL: 'https://www.saucedemo.com',
     headless: true,
-    screenshot: "on",
-    video: "on",
+    screenshot: 'on',
+    video: 'on',
     actionTimeout: 0,
-    trace: "on",
+    trace: 'on',
   },
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
     {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
     },
     {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
     },
     {
       name: 'Mobile Chrome',
