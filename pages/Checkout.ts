@@ -26,7 +26,7 @@ class CheckoutPage {
     );
   }
 
-  @When("I proceed to checkout")
+  @When("I Initiate the checkout process")
   async proceedToCheckout() {
     await this.checkoutButton.click();
   }
@@ -40,7 +40,7 @@ class CheckoutPage {
     await this.finishButton.click();
   }
 
-  @Then("I should see the checkout confirmation")
+  @Then("I should Verify the presence of the checkout success message")
   async verifyCheckoutConfirmation() {
     await expect(this.checkoutConfirmation).toBeVisible();
   }

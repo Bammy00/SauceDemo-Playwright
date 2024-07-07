@@ -1,13 +1,13 @@
 Feature: Shopping Experience - Adding Items to Cart and Completing Checkout
 
   Background:
-    Given I am logged in as a 'standard' user
-    Given I am on the products page
+    Given I am Signed in as a 'standard' user
+    Given I am on the E-commerce page
 
   Scenario: Purchase an item and confirm checkout completion
-    When I add an item to the cart
-    When I go to the cart
+    When I add a product to the cart
+    When I Navigate to the shopping cart
     Then I should see the item in the cart
-    When I proceed to checkout
+    When I Initiate the checkout process
     When I complete the checkout process
-    Then I should see the checkout confirmation
+    Then I should Verify the presence of the checkout success message

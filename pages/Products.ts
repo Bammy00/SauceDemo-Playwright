@@ -25,14 +25,14 @@ export class ProductsPage {
     this.itemPrice = page.locator(PRODUCTS_PAGE_SELECTORS.itemPrice);
   }
 
-  @Given("I am on the products page")
+  @Given("I am on the E-commerce page")
   async navigateToProductPage() {
     if (!this.page.url().includes("inventory")) {
       await this.page.goto("/v1/inventory.html");
     }
   }
 
-  @When("I add an item to the cart")
+  @When("I add a product to the cart")
   async addItemToCart() {
     currentItem = await this.getCurrentItemDetails();
     await this.addToCartButton.first().click();

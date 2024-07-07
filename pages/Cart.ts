@@ -23,7 +23,7 @@ export class CartPage {
     this.itemPrice = this.cartItem.locator(CART_PAGE_SELECTORS.itemPrice);
   }
 
-  @When("I go to the cart")
+  @When("I Navigate to the shopping cart")
   async navigateToCart() {
     await this.shoppingCart.click();
   }

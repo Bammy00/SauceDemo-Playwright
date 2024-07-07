@@ -23,7 +23,7 @@ export class LoginPage {
     this.loginButton = page.locator(LOGIN_BUTTON_SELECTOR);
   }
 
-  @Given("I am logged in as a {string} user")
+  @Given("I am Signed in as a {string} user")
   async loginAs(user: UserType) {
     await this.page.goto("/v1");
     const userCredentials = this.getUserCredentials(user);
