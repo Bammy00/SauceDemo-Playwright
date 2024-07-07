@@ -33,9 +33,9 @@ class CheckoutPage {
 
   @When("I complete the checkout process")
   async completeCheckout() {
-    await this.firstNameInput.fill("Test");
-    await this.lastNameInput.fill("Test");
-    await this.postalCodeInput.fill("1234");
+    await this.firstNameInput.fill("Ayobami");
+    await this.lastNameInput.fill("Eleyinmi");
+    await this.postalCodeInput.fill("0000");
     await this.continueButton.click();
     await this.finishButton.click();
   }
