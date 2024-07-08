@@ -3,7 +3,7 @@
 import { Page, Locator, expect } from "@playwright/test";
 import { Given, When, Fixture } from "playwright-bdd/decorators";
 import { ItemModel } from "../types/ItemModel";
-import { PRODUCTS_PAGE_SELECTORS } from "../utils/utils"; // Adjust the path as needed
+import { PRODUCTS_PAGE_SELECTORS } from "../utils/utils"; 
 
 let currentItem: ItemModel | null = null;
 
