@@ -10,7 +10,7 @@ const testDir = defineBddConfig({
 
 const config = defineConfig({
   testDir,
-  reporter: 'html',
+  reporter: [ ['html'],['allure-playwright'],],
   use: {
     baseURL: 'https://www.saucedemo.com',
     headless: true,
