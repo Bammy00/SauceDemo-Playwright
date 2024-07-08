@@ -3,7 +3,7 @@
 import { Page, Locator, expect } from "@playwright/test";
 import { When, Then, Fixture } from "playwright-bdd/decorators";
 import { ProductsPage } from "./Products";
-import { CART_PAGE_SELECTORS } from "../utils/utils"; // Adjust the path as needed
+import { CART_PAGE_SELECTORS } from "../utils/utils";
 
 @Fixture("cartPage")
 export class CartPage {
